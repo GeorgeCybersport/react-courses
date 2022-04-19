@@ -1,0 +1,53 @@
+.eventForm {
+  border: 1px solid $greyBorder;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  position: fixed;
+  border-radius: 20px;
+  z-index: 9;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 50px;
+  .button-block {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+}
+h4:not(:first-child) {
+  margin-top: 30px;
+}
+.blurBlock {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 8;
+  background-color: #a9a9a9;
+  opacity: 0.5;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+@media (min-width: 569px) {
+  .eventForm {
+    height: 90%;
+    width: 50%;
+  }
+  .eventForm.notes {
+    height: 40%;
+    width: 50%;
+  }
+}
+@media (max-width: 568px) {
+  .eventForm {
+    width: 90%;
+    height: 40%;
+  }
+}

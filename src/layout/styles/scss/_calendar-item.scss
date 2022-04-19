@@ -1,0 +1,76 @@
+.calendar-container {
+  border: 1px solid #c0c0c0;
+  padding: 6px;
+  position: absolute;
+  right: 0px;
+  z-index: 2;
+  background-color: #fff;
+  top: 40px;
+}
+@media (min-width: 960px) {
+  .calendar-container {
+    width: 440px;
+  }
+  #calendar {
+    line-height: 30px;
+  }
+}
+@media (min-width: 569px) and (max-width: 959px) {
+  .calendar-container {
+    width: 350px;
+  }
+  #calendar {
+    line-height: 25px;
+  }
+}
+@media (max-width: 568px) {
+  .calendar-container {
+    width: 70%;
+  }
+  #calendar {
+    line-height: 22px;
+  }
+}
+#calendar {
+  width: 100%;
+  font: monospace;
+  font-size: 20px;
+  text-align: center;
+}
+#calendar thead tr:last-child {
+  font-size: small;
+  color: black;
+}
+#calendar thead tr:nth-child(1) td:nth-child(2) {
+  color: black;
+}
+#calendar thead tr:nth-child(1) td:nth-child(1):hover,
+#calendar thead tr:nth-child(1) td:nth-child(3):hover {
+  cursor: pointer;
+}
+#calendar tbody tr {
+  height: 20px;
+}
+#calendar tbody td {
+  color: black;
+  cursor: pointer;
+  &:hover {
+    color: green;
+  }
+}
+#calendar tbody td:nth-child(n + 6),
+#calendar .holiday {
+  color: red;
+  cursor: pointer;
+  &:hover {
+    color: green;
+  }
+}
+#calendar tbody td.today {
+  background: red;
+  color: #fff;
+}
+#calendar tbody td.withMark {
+  background: blue;
+  color: #fff;
+}
